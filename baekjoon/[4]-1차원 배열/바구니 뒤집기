@@ -1,0 +1,10 @@
+N,M=map(int,input().split())
+b=[0]*N
+for a in range(N):
+    b[a] =  a+1
+for _ in range(M):
+    i,j=map(int,input().split())
+    c=b[i-1:j] #구간 나눔 
+    c.reverse()
+    b[i-1:j]=c
+print(*b)

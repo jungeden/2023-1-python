@@ -1,0 +1,19 @@
+N,M=map(int,input().split())
+P=[]
+Q=[]
+r=[]
+for _ in range(N):
+    p=input()
+    P.append(p)
+for _ in range(M):
+    q=input()
+    Q.append(q)
+for i in Q:
+    if type(i) != "<class 'int'>":
+        for j in P:
+            if i == j:
+                r.append((P.index(j))+1)
+    elif type(i) == "<class 'int'>":
+        r.append(P[i-1])
+for k in r:
+    print(k,Q)

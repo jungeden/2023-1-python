@@ -1,0 +1,4 @@
+w=input()
+n=int(input())
+list=list(w) #문자 단위로 분리
+print(f'{list[n-1]}')

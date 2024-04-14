@@ -1,0 +1,15 @@
+T=int(input())
+a=''
+b=[]
+c=[]
+d=[]
+R=[]
+for _ in range(T):
+    r,s=input().split()
+    R.append(r)
+    s_=''.join(map(str,s))
+    for i in s_:
+        b.append(i*int(r))
+for j in b[:len(s)-1]:
+    b=+b[j]
+print(b)

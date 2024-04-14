@@ -1,0 +1,6 @@
+N=int(input())
+s=list(map(int,input().split()))
+b=[]
+for i in s:
+    b.append(i/max(s)*100) #새로운 값
+print(sum(b)/N) #  평균

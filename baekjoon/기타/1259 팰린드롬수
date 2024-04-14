@@ -1,0 +1,12 @@
+A=[]
+B=[]
+while True:
+    a=int(input())
+    if a == 0:
+        break
+    else:
+        for i in range(0,len(a)):
+            if a[i] == a[len(a)-i]:
+                B.append('yes')
+            else:
+                B.append('no')

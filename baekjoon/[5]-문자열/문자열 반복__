@@ -1,0 +1,13 @@
+T=int(input())
+
+for i in range(T):
+    r, s=input().split()
+    T=list(s)
+    T_=[]
+    
+    for j in T:
+        T_.append(j * int(r))
+        
+    for j in T_:
+        print(j, end="")
+    print()

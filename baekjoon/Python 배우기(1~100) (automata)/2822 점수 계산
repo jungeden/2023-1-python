@@ -1,0 +1,8 @@
+S=[]
+A=[]
+for _ in range(8):
+    s=int(input())
+    S.append(s)
+    for i in range(5):
+        A.append(max(S))
+        S.remove(max(S))

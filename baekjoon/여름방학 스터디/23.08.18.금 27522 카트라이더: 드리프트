@@ -1,0 +1,40 @@
+T={}
+A=[]
+Red={}
+Blue={}
+a=[10,8,6,5,4,3,2,1] #점수표
+for _ in range(8):
+    t=input()
+    t.replace(':','') #:없애서 하나의 숫자로 만듦
+    A.append(t)
+A.sort() #순위대로 정렬 (작은 순서대로 정렬=순위)
+for i in A:
+    for j in a:
+        T={i:j} #순위대로 점수 values에 추가
+Red=T
+Blue=T
+for k in list(T): #list 안했더니 RuntimeError: dictionary changed size during iteration 오류남. 처음 그냥 했을 때 딕셔너리 값이 그대로 k에 나오지 않음 알게됨 => AttributeError: 'str' object has no attribute 'values'
+    if 'R' in k: #R 있으면 Blue에서 k값에 해당하는거 삭제
+        del Blue[k] #딕셔너리 분할 하고 싶어서 리스트로 바꿔서 append써보고 등 여러가지 방법 써봤지만 Red=T,Blue=T 해서 del 쓰는 것이 됐음
+    elif 'B' in k: #B 있으면 Red에서 k값에 해당하는거 삭제
+        del Red[k]
+if sum(Red.values()) > sum(Blue.values()): #values합 보고 점수가 더 큰 쪽이 이김
+    print('Red')
+elif sum(Red.values()) < sum(Blue.values()):
+    print('Blue')
+else: #점수가 동일한 경우
+    b=1
+    for i in A:
+        T={i:b} #values에 점수 말고 순위 할당
+        b+=1 
+    Red=T
+    Blue=T
+    for k in list(T):
+        if 'R' in k:
+            del Blue[k]
+        elif 'B' in k:
+            del Red[k]
+    if sum(Red.values()) > sum(Blue.values()): # 점수 동일한 경우 순위가 높은 선수가 많은 팀이 이기기 때문에 순위 values값 작은 쪽이 이김
+        print('Blue')
+    else:
+        print('Red')

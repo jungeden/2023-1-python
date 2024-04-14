@@ -1,0 +1,27 @@
+N=int(input())
+A=[]
+for _ in range(N):
+    s=input().split()
+    S=[]
+    S1=[]
+    S.append(s)
+    for i in range(len(S),0,-1):
+        S1.append(S[i])
+A.append(S1)
+for j in A:
+    print(j)
+
+
+#맞힘! 23.07.21.금
+N=int(input())
+A=[]
+c=1
+for _ in range(N):
+    a=list(input().split())
+    a.reverse()
+    a=' '.join(a)
+    a=f'Case #{c}: {a}'
+    c+=1
+    A.append(a)
+for i in A:
+    print(i)

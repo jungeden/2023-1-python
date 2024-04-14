@@ -1,0 +1,33 @@
+N=int(input())
+Q=[]
+RQ=[]
+for _ in range(N):
+    q=input()
+    if q[:4] == 'push':
+        Q.append(q[5:])
+    if q == 'pop':
+        if len(Q) == 0:
+            RQ.append(-1)
+        else:
+            RQ.append(Q[0])
+            Q.remove(Q[0])
+    if q == 'size':
+        RQ.append(len(Q))
+    if q == 'empty':
+        if len(Q) == 0:
+            RQ.append(1)
+        else:
+            RQ.append(0)
+    if q == 'front':
+        if len(Q) == 0:
+            RQ.append(-1)
+        else:
+            RQ.append(Q[0])
+    if q == 'back':
+        if len(Q) == 0:
+            RQ.append(-1)
+        else:
+            RQ.append(Q[-1])
+
+for i in RQ:
+    print(i)

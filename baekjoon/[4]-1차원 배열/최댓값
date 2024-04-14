@@ -1,0 +1,8 @@
+a=[]
+b=0
+for i in range(9):
+    a.append(int(input()))
+for i in range(9):
+    if max(a) == a[i]:
+        c=b+i
+print(max(a),c+1)

@@ -1,0 +1,12 @@
+N=int(input())
+A=[]
+n=665
+c=0
+while True:
+    n+=1
+    if '666' in str(n):
+        A.append(n)
+        c+=1
+    if N==c:
+        print(f'{A[N-1]}')
+        break

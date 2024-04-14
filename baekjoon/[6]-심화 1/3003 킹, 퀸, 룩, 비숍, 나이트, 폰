@@ -1,0 +1,9 @@
+A=list(map(int,input().split()))
+C=[1,1,2,2,2,8]
+for i in range(0,6):
+    if A[i] == C[i]:
+        A[i] = 0
+    else:
+        A[i] = C[i]-A[i]
+print(*A)
+

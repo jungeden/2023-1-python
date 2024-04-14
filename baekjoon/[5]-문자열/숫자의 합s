@@ -1,0 +1,4 @@
+N=int(input())
+n=input()
+a=list(map(int,str(n))) #숫자 분리
+print(sum(a))

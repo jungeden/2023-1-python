@@ -1,0 +1,11 @@
+S=int(input())
+a=0
+c=0
+while a <= S:
+    c+=1
+    a+=c
+    if a > S:
+        break
+print(c-1)
+
+#다시해보기

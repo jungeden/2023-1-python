@@ -1,0 +1,11 @@
+import string
+abc=string.ascii_lowercase
+b=[]
+s=input()
+s=''.join(map(str,s))
+for i in abc:
+    if i in s:
+        b.append(f'{s.find(i)}')
+    else:
+        b.append('-1')
+print(*b)

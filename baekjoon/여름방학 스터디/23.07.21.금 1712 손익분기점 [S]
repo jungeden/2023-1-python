@@ -1,0 +1,12 @@
+a,b,c=map(int,input().split())
+if b >= c:
+    print(-1)
+else:
+    print(a//(c-b)+1)
+
+'''
+a+(b*i) >= c*i
+a >= (c-b)*i
+a/(c-d) >= i
+'''
+#23.07.21.금

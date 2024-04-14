@@ -1,0 +1,18 @@
+A=[]
+B=[]
+C=[]
+D=[]
+for j in range(10,1001,10):
+    C.append(j)
+for _ in range(10):
+    a=int(input())
+    A.append(a)
+    m_a=max(A)
+    B=[0]*(m_a//10)
+    for i in A:
+        B[i-1]+=1
+        c=B.index(max(B))
+D.append(sum(A)/len(A))
+D.append(C[c])
+for k in D:
+    print(k)

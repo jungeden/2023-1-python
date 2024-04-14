@@ -1,0 +1,53 @@
+A=300
+B=60
+C=10
+e=[]
+e2=[]
+T=int(input())
+if T%10 == 0:
+    if T <= 60: #60보다 작거나 같을 때
+        if T == 60:
+            print('0 1 0')
+        else:
+            for i in range(1,6):
+                if C*i == T:
+                    print(f'0 0 {i}')
+    elif T <= 300: #300보다 작거나 같을 때
+        if T == 300:
+            print('1 0 0')
+        else:
+            if T%B == 0:
+                    print(f'0 {T//B} 0')
+            else:
+                for i in range(1,5):
+                    if B*i > T:
+                        e.append(i)
+                        t300=T-(B*(e[0]-1))
+                        t300=t300//C
+                        print(f'0 {e[0]-1} {t300}')
+                        e=[]
+                        break
+    else:
+        if T%A == 0:
+            print(f'{T//300} 0 0')
+        else:
+            for i in range(1,1000):
+                if A*i > T:
+                    e.append(i)
+                    t=T-(A*(e[0]-1))
+                    if t%B == 0:
+                        print(f'{e[0]-1} {t//B} 0')
+                        e=[]
+                        break
+                    else:
+                        for j in range(1,5):
+                            if B*j > t:
+                                e2.append(j)
+                                t2=t-(B*(e2[0]-1))
+                                t2=t2//C
+                                print(f'{e[0]-1} {e2[0]-1} {t2}')
+                                e2=[]
+                                break
+                    break
+else:
+    print('-1')
