@@ -1,0 +1,13 @@
+#ex9_5
+'''
+각 변수들이 동일한 객체인지 알아보기
+'''
+a=1
+b=1
+c=2
+d=3
+e=3
+print(f'a와 b는 같은 객체인가? {a is b}')
+print(f'b와 c는 같은 객체인가? {b is c}')
+print(f'c와 d는 같은 객체인가? {c is d}')
+print(f'd와 e는 같은 객체인가? {d is e}')

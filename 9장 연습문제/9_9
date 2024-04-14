@@ -1,0 +1,25 @@
+#ex9_9
+'''
+__add__(), __sub__() 메소드 구현하기
+'''
+class Counter:
+    def __init__(self,number):
+        self.__number = number
+    def __add__(self,self2):
+        num = self.__number + self2.__number
+        if num >= 100:
+            num = 0
+        return Counter(num)
+    def __sub__(self,self2):
+        num = self.__number - self2.__number
+        if num <= -1:
+            num = 0
+        return Counter(num)
+    def __str__(self):
+        return f'C({self.__number})'
+c1 = Counter(10)
+c2 = Counter(20)
+c3 = c1 + c2
+c4 = c1 - c2
+print('c3 =', c3)
+print('c4 =', c4)
