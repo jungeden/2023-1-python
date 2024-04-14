@@ -1,0 +1,14 @@
+#8_10
+'''
+1에서 10까지 랜덤한 숫자 30개 가진 randint30.txt 만들기
+'''
+import random
+r_n=[random.randint(1,10) for i in range(30)]
+with open('randint30.txt','w') as f:
+    for num in r_n:
+        f.write(str(num)+' ')
+with open('randint30.txt','r') as f:
+    a=f.read()
+    for j in range(1,11):
+        b=a.count(str(j))
+        print(f'{j} : {b}개')

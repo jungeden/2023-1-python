@@ -1,0 +1,16 @@
+#8_1
+'''
+예외 처리문 작성하기
+'''
+#(2)
+try:
+    a,b=input('두 수를 입력하시오 :').split()
+    result = int(a) / int(b)
+except ValueError:
+    print('입력 값이 정수나 실수가 아님')
+except ZeroDivisionError:
+    print('0으로 나눔을 시도함')
+except:
+    print('두 정수를 입력하시오')
+else:
+    print(f'{a} / {b} = {result}')
