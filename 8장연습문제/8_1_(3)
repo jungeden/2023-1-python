@@ -1,0 +1,16 @@
+#8_1
+'''
+예외 처리문 작성하기
+'''
+#(3)
+try: 
+    a_list=[200,300,400]
+    print(f'a_list : {a_list}')
+    idx = int(input('구하고자 하는 값의 인덱스를 0,1,2 중에서 입력하시오 :'))
+    result = a_list[idx]
+except ValueError:
+    print('입력 값이 정수가 아님')
+except:
+    print('0,1,2 중에서 입력하시오')
+else:
+    print(f'결과 : {result}')

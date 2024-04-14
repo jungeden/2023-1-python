@@ -1,0 +1,14 @@
+#8_9
+'''
+x,y의 쌍으로 된 점을 x좌표가 증가하는 순서에 따라서 정렬하는 프로그램 만들기
+'''
+with open('coord.txt','r') as f:
+    lines = f.readlines()
+    num_points = int(lines[0])
+    points = []
+    for line in lines[1:]:
+        x, y = map(int,line.split())
+        points.append((x,y))
+    sorted_points = sorted(points, key=lambda p: (p[0],p[1]))
+    for point in sorted_points:
+        print(point[0],point[1])

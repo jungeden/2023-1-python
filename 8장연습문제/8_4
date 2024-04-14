@@ -1,0 +1,13 @@
+#8_4
+'''
+greet.txt 파일을 write를 이용해 작성하기
+'''
+try:
+    f=open('greet.txt', 'w')
+    f.write('Hi, everyone.\nWelcome to Python.')
+    f.close()
+    a=open('greet.txt', 'r')
+    print(a.read())
+    a.close()
+except PermissionError:
+    print('파일이 쓰기 금지 모드로 되어있음.')

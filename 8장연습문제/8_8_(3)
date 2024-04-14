@@ -1,0 +1,11 @@
+#8_8
+'''
+다음 기능 수행하기
+'''
+#(3)
+with open('random_numbers.txt', 'r') as f:
+    with open('random_odd.txt', 'w') as f3:
+        numbers=f.read().split()
+        for num in numbers:
+            if int(num)%2!=0:
+                f3.write(num+' ')
